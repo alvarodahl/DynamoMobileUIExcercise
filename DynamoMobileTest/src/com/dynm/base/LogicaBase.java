@@ -55,6 +55,7 @@ public class LogicaBase {
 			return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 		}
 
+		//Handler de Screenshots con Timestamp
 		public static void takeScreenshot(String script, String metodo) {
 
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -67,6 +68,7 @@ public class LogicaBase {
 			}
 		}
 		
+		//Método con JS para esperar a que la página termine de refreshear 
 		public static void waitForPageToLoad() {
 			do {
 				JavascriptExecutor js = (JavascriptExecutor) driver;
